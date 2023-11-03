@@ -4,4 +4,8 @@ function getComputerChoice(){
     let randomNumber = Math.floor((Math.random() * 3));
     return words[randomNumber];
 }
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+function  playRound(playerSelection, computerSelection){
+
+}
