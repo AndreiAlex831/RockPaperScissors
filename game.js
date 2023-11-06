@@ -4,7 +4,6 @@ function getComputerChoice(words){
     let randomNumber = Math.floor((Math.random() * 3));
     return words[randomNumber];
 }
-// console.log(getComputerChoice());
 
 function  playRound(playerSelection, computerSelection){
        if(playerSelection.includes("Rock")
@@ -14,5 +13,7 @@ function  playRound(playerSelection, computerSelection){
 }
 
 const playerSelection = "Rock";
+console.log(playerSelection);
 const computerSelection = getComputerChoice();
+console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
