@@ -12,7 +12,7 @@ function  playRound(playerSelection, computerSelection){
        }
 }
 
-let playerSelection = "rock";
+let playerSelection = prompt("Enter your choice");
 playerSelection = playerSelection.toLowerCase();
 console.log(playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
 const computerSelection = getComputerChoice();
