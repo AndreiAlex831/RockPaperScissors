@@ -1,7 +1,7 @@
 
 function getComputerChoice(words){
     words = ["Rock", "Paper", "Scissors"];
-    let randomNumber = Math.floor((Math.random() * 3));
+    const randomNumber = Math.floor((Math.random() * 3));
     return words[randomNumber];
 }
 
@@ -12,8 +12,8 @@ function  playRound(playerSelection, computerSelection){
        }
 }
 
-let playerSelection = prompt("Enter your choice");
-playerSelection = playerSelection.toLowerCase();
+const playerSelection = prompt("Enter your choice");
+playerSelection.toLowerCase();
 console.log(playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
 const computerSelection = getComputerChoice();
 console.log(computerSelection);
