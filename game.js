@@ -1,3 +1,5 @@
+let playerScore = 0;
+let computerScore = 0;
 function game(n) {
     for (let i = 0; i < n; i++) {
         const playerSelection = prompt("Enter choice");
@@ -13,13 +15,19 @@ function game(n) {
         if ((playerSelection === "rock" && computerSelection === "scissors") ||
             (playerSelection === "paper" && computerSelection === "rock") ||
             (playerSelection === "scissors" && computerSelection === "paper")) {
+            playerScore++;
             return "You Win! " + playerSelection + " beats " + computerSelection;
+
         } else if (playerSelection === computerSelection) {
             return " It's a tie! Both chose " + playerSelection;
         } else {
+            computerScore++;
             return "You Lose! " + computerSelection + " beats " + playerSelection;
+
         }
     }
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
 
     function getComputerChoice(words) {
         words = ["Rock", "Paper", "Scissors"];
@@ -28,3 +36,5 @@ function game(n) {
     }
 }
 game(5);
+
+
