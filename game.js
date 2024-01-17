@@ -1,13 +1,13 @@
 let playerScore = 0;
 let computerScore = 0;
-function game(n) {
-    for (let i = 0; i < n; i++) {
-        const playerSelection = prompt("Enter choice");
-        const computerSelection = getComputerChoice();
-        console.log(playerSelection);
-        console.log(computerSelection);
-        console.log(playRound(playerSelection, computerSelection));
-    }
+// function game(n) {
+//     for (let i = 0; i < n; i++) {
+//         const playerSelection = prompt("Enter choice");
+//         const computerSelection = getComputerChoice();
+//         console.log(playerSelection);
+//         console.log(computerSelection);
+//         console.log(playRound(playerSelection, computerSelection));
+//     }
 
     function playRound(playerSelection, computerSelection) {
         playerSelection = playerSelection.toLowerCase();
@@ -34,7 +34,6 @@ function game(n) {
         const randomNumber = Math.floor((Math.random() * 3));
         return words[randomNumber];
     }
-}
-game(5);
+// game(5);
 
 
