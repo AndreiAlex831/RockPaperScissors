@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <script src="game.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,8 +8,62 @@
     <title>Document</title>
 </head>
 <body>
-    <button>rock</button>
-    <button>paper</button>
-    <button>scissors</button>
+<div id="container">
+    <button id="Rock">rock</button>
+    <button id="Paper">paper</button>
+    <button id="Scissor">scissors</button>
+</div>
+<script>
+    let playerScore = 0;
+    let computerScore = 0;
+    // function game(n) {
+    //     for (let i = 0; i < n; i++) {
+    //         const playerSelection = prompt("Enter choice");
+    //         const computerSelection = getComputerChoice();
+    //         console.log(playerSelection);
+    //         console.log(computerSelection);
+    //         console.log(playRound(playerSelection, computerSelection));
+    //     }
+    document.getElementById('Rock').addEventListener('click', function () {
+        playRound('Rock');
+    });
+    document.getElementById('Paper').addEventListener('click', function () {
+        playRound('Paper');
+    });
+    document.getElementById('Scissor').addEventListener('click', function () {
+        playRound('Scissor');
+    });
+    function playRound(playerSelection, computerSelection) {
+        computerSelection = getComputerChoice(["Rock", "Paper", "Scissors"]);
+        playerSelection = playerSelection.toLowerCase();
+        // computerSelection = computerSelection.toLowerCase();
+        if ((playerSelection === "rock" && computerSelection === "scissors") ||
+            (playerSelection === "paper" && computerSelection === "rock") ||
+            (playerSelection === "scissors" && computerSelection === "paper")) {
+            playerScore++;
+            return "You Win! " + playerSelection + " beats " + computerSelection;
+
+        } else if (playerSelection === computerSelection) {
+            return " It's a tie! Both chose " + playerSelection;
+        } else {
+            computerScore++;
+            return "You Lose! " + computerSelection + " beats " + playerSelection;
+
+        }
+    }
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+
+    function getComputerChoice(words) {
+        // words = ["Rock", "Paper", "Scissors"];
+        const randomNumber = Math.floor((Math.random() * 3));
+        return words[randomNumber].toLowerCase();
+    }
+    // game(5);
+</script>
+
+
+
+    <!--    <script type="module" src="game.js"></script>-->
 </body>
 </html>
