@@ -2,7 +2,7 @@
 //define getComputerChoice function
 function getComputerChoice (){
 //use random math to return rps
-  const computerChoice = ["rock", "paper", "scissors"];
+  const computerChoice = ["Rock", "Paper", "Scissors"];
   const random = Math.floor(Math.random() * computerChoice.length);
   return computerChoice[random];
 }
@@ -12,8 +12,9 @@ getComputerChoice();
 //define humanChoice function
 function humanChoice (){
 //use prompt to get choice
-  let choice = prompt("Pick one: ")
-  console.log(choice);
+  let myChoice = prompt("Rock, Paper or Scissors?: ");
+  myChoice = myChoice.charAt(0).toUpperCase() + myChoice.substring(1);
+  console.log(myChoice);
 }
 humanChoice();
 
