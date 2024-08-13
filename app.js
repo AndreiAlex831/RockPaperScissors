@@ -53,8 +53,8 @@ function playGame(myChoice) {
         computerScore++;
     }
 
-    console.log("humanScore: ", humanScore);
-    console.log("computerScore: ", computerScore);
+    document.getElementById('humanScoreDiv').innerText = `humanScore: ${humanScore}`;
+    document.getElementById('computerScoreDiv').innerText = `computerScore: ${computerScore}`;
 }
 
 humanChoice();
