@@ -1,3 +1,4 @@
+
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
@@ -42,10 +43,9 @@ let computerScore = 0;
 function playGame(myChoice) {
     const computerChoice = getComputerChoice();
     const result = playRound(myChoice, computerChoice);
-
-    console.log("Computer choice: ", computerChoice);
-    console.log("Your choice: ", myChoice);
-    console.log(result);
+    document.getElementById('computerChoice').innerText = `computer choice: ${computerChoice}`;
+    document.getElementById('myChoice').innerText = `my choice: ${myChoice}`;
+    document.getElementById('result').innerText = `result: ${result}`;
 
     if (result.includes("You win!")) {
         humanScore++;
