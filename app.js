@@ -1,4 +1,9 @@
-
+function reset(resetting) {
+    resetting = document.getElementById('reset');
+    resetting.addEventListener('click', function (){
+        location.reload();
+    });
+}
 function getComputerChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
@@ -37,24 +42,41 @@ function playRound(myChoice, computerChoice) {
     }
 }
 
+
 let humanScore = 0;
 let computerScore = 0;
 
 function playGame(myChoice) {
-    const computerChoice = getComputerChoice();
-    const result = playRound(myChoice, computerChoice);
-    document.getElementById('computerChoice').innerText = `computer choice: ${computerChoice}`;
-    document.getElementById('myChoice').innerText = `my choice: ${myChoice}`;
-    document.getElementById('result').innerText = `result: ${result}`;
+        if (humanScore == 5){
+            return;
+        }else if(computerScore == 5){
+            return;
+        }
 
-    if (result.includes("You win!")) {
-        humanScore++;
-    } else if (result.includes("You lose!")) {
-        computerScore++;
+        const computerChoice = getComputerChoice();
+        const result = playRound(myChoice, computerChoice);
+        document.getElementById('myChoice').innerText = `my choice: ${myChoice}`;
+        document.getElementById('computerChoice').innerText = `computer choice: ${computerChoice}`;
+        document.getElementById('result').innerText = `result: ${result}`;
+
+        if (result.includes("You win!")) {
+            humanScore++;
+        } else if (result.includes("You lose!")) {
+            computerScore++;
+        }
+
+        if (humanScore == 5) {
+            document.getElementById('winnerHuman').innerText = `You Win!`;
+
+        } else if (computerScore == 5) {
+            document.getElementById('winnerComputer').innerText = `Computer Wins!`;
+
+        }
+
+
+        document.getElementById('humanScoreDiv').innerText = `humanScore: ${humanScore}`;
+        document.getElementById('computerScoreDiv').innerText = `computerScore: ${computerScore}`;
     }
 
-    document.getElementById('humanScoreDiv').innerText = `humanScore: ${humanScore}`;
-    document.getElementById('computerScoreDiv').innerText = `computerScore: ${computerScore}`;
-}
-
+reset();
 humanChoice();
