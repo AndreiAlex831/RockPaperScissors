@@ -64,5 +64,12 @@ button:active {
         height: 130px;
     }
 
+    .button-container {
+        padding: 4rem;
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
