@@ -9,26 +9,28 @@
   <title>Document</title>
 </head>
 <body>
-<button id="rock">Rock</button>
-<img src="./images/rock.png"
-     alt="rock hand">
-<button id="paper">Paper</button>
-<img src="./images/paper.png"
-     alt="paper hand">
-<button id="scissors">Scissors</button>
-<img src="./images/scissors.png"
-     alt="scissor hand">
-<button id="reset">Reset</button>
-<div class="choice-container">
-<div id="myChoice"></div>
+<div class="button-container">
+<button id="rock"><img src="./images/rock.png"
+                       alt="rock hand"></button>
+
+
+<button id="paper"><img src="./images/paper.png"
+                        alt="paper hand"></button>
+
+<button id="scissors"><img src="./images/scissors.png"
+                           alt="scissor hand"></button>
+<button id="reset"><img src="./images/reset.png"
+                        alt="reset"></button>
 </div>
+<div class="results-container">
+<div id="myChoice"></div>
 <div id="computerChoice"></div>
 <div id="result"></div>
 <div id="humanScoreDiv"></div>
 <div id="computerScoreDiv"></div>
 <div id="winnerHuman"></div>
 <div id="winnerComputer"></div>
-
+</div>
 <script src="app.js" defer></script>
 </body>
 </html>
