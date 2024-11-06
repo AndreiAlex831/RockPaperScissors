@@ -1,4 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 50%;
+    border: 5px solid #cadbe9;
+}
+
 img {
-    width: 100px;
+    width: 17rem;
     height: auto;
+}
+
+body {
+    background-color: #F3F3E0;
+    width: 100vw;
+    height: auto;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img {
+    border: 3px solid #f1f1df;
+    border-radius: 50%;
+}
+
+img:active {
+    background-color: #cadbe9;
+    box-shadow: 0 5px #133e86;
+    transform: translateY(4px);
 }
