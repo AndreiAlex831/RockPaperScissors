@@ -38,12 +38,18 @@ button:active {
 }
 
 .button-container {
-    background-color: lightcoral;
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.results-container {
+    color: #133e87;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 720px) {
